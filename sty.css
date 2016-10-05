@@ -1,0 +1,297 @@
+html{
+background-color: rgb(215,217,217);
+}
+body{
+    margin: 0;
+    padding-bottom: 30px;
+} /*fix for the footer space overlapping items*/
+.logo{
+    margin-top: 10px;
+    margin-left: 10px;
+	color: rgba(113, 15, 4, .9);
+	font-size: 34pt;
+	height: 50px;
+	line-height: 50px;
+	display: table;
+} /* for some reason removing font size messes with the centered alignment relative to the picture logo, will keep it here for now*/
+#plogo{ /*styling the logo*/
+	display: inline;
+	width: 60px;
+	height: 45px;
+}
+#logof{ /*styling the company name*/
+	font-size: 34pt;
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 5px;
+	font-family: 'Baloo Bhai', cursive;
+}
+/*styling the navigation bar, keeping the colors consistent with the logo, and stretching the bar so that it takes up the entire page*/
+ul{
+	background-color: rgba(113, 15, 4, .9);
+	text-align: center;
+	width: 97%;
+	height: 50px;
+	margin-left: 0;
+    margin-top: 0;
+	overflow: hidden; 
+	font-family: 'Baloo Bhai', sans-serif;
+	font-size: 18pt; 
+	padding-top: 6px;
+}
+li{
+	display: inline-block;
+}
+li a, .exp {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	padding-top: 6px;
+	padding-right: 10px;
+    cursor: pointer;
+}
+li a:hover, .drop:hover .exp {
+	background-color: #F9F9F9;
+	color: rgba(113, 15, 4, .9);
+}
+.menui {
+	display: none;
+	position: absolute;
+	background-color: #F9F9F9;
+	min-width: 140px;
+}
+.menui a {
+	color: white;
+	padding: 10px 12px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+	background: rgba(113, 15, 4, .9);
+}
+.menui a:hover {
+	background-color: #F9F9F9;
+}
+.drop:hover .menui {
+    display: block;
+}
+/*end nav bar style*/
+
+/*first image, stretched on some pages*/
+.cov{
+	width: 100%;
+	height: 400px;
+	margin: 0;
+}
+/*header style1 only on careers pages*/
+h1{
+    font-family: 'Nunito',sans-serif;
+    text-transform: capitalize;
+    padding-left: 10px;
+}
+/*header style2*/
+h2{
+    font-family: 'Nunito',sans-serif;
+    text-transform: capitalize;
+    padding-left: 10px;
+}
+/*main headers for all pages*/
+h4{ 
+    font-family: 'Nunito',sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 20pt;
+    margin-top: 0;
+    margin-bottom:0;
+}
+/*clear floats*/
+.clearfix: after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+/*paragraph style */
+p{
+    padding-left: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15pt;
+    font-weight: lighter;
+}
+/*product layout in table format*/
+table{
+	font-family: 'Nunito', sans-serif;
+}
+th{
+    border: none;
+    text-align: left;
+    font-size: 16pt;
+}
+/*container format*/
+.itmin{
+	border-radius: 30px;
+	border-color: rgba(113, 15, 4, .9);
+	color: rgba(113, 15, 4, .9);
+	font-family: 'Nunito', sans-serif;
+	text-align:center;
+	width: 200px;
+	height: 200px;
+}
+/*img format*/
+.itv{
+	width: 100px;
+	height: 100px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.itv:hover {opacity: 0.7;}
+/*img format for longer images*/
+.itv2{
+    width: 100px;
+    height: 175px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.itv2:hover {opacity: 0.7;}
+/*Modal style, default hidden and full screen*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+/* modal content (image) */
+.modal-content {
+    margin: auto;
+    display: inline;
+    width: 50%;
+    max-width: 500px;
+    max-height: 400px;
+}
+/*caption for modal when clicked on*/
+.caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #CCCCCC;
+    padding: 10px 0;
+    height: 150px;
+}
+/*modal animation, will zoom into the picture and diplay caption*/
+.modal-content, .caption { 
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+/* The Close Button */
+.close {
+    background: #606061;
+    color: #F1F1F1;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s;
+    top: 5%; /*positions close button to the right and top of image*/
+    right: 20%;
+    width: 24px;
+    line-height: 25px;
+    position: absolute;
+    -webkit-border-radius: 12px; /* circular button*/
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000000; /*makes button look 3d*/
+    -webkit-box-shadow: 1px 1px 3px #000000;
+    box-shadow: 1px 1px 3px #000000;
+}
+.close:hover,.close:focus {
+    background-color: rgba(113, 15, 4, .9);
+    cursor: pointer; /*cursor won't turn into a text edit icon if this is here, will have finger on button*/
+}
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+.modalDialog {
+        position: fixed;
+        font-family: Arial, Helvetica, sans-serif;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.8);
+        z-index: 99999;
+        opacity:0;
+        -webkit-transition: opacity 400ms ease-in;
+        -moz-transition: opacity 400ms ease-in;
+        transition: opacity 400ms ease-in;
+        pointer-events: none;
+    }
+
+    .modalDialog:target {
+        opacity:1;
+        pointer-events: auto;
+    }
+
+    .modalDialog > div {
+        width: 400px;
+        position: relative;
+        margin: 10% auto;
+        padding: 5px 20px 13px 20px;
+        border-radius: 10px;
+        background: #FFFFFF;
+        background: -moz-linear-gradient(#FFFFFF, #999999);
+        background: -webkit-linear-gradient(#FFFFFF, #999999);
+        background: -o-linear-gradient(#FFFFFF, #999999);
+    }
+
+
+footer{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10pt;
+    color: white;
+    font-weight: lighter;
+    text-align: center;
+    background-color: rgba(113, 15, 4, .9);
+    height: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
